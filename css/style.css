@@ -1,6 +1,8 @@
 :root {
   --primary: #ffa500;
-
+  --bg-primary:#ffc300;
+  --bg-secondary:#ffc500;
+  --color-span:#ff000f;
   --bg: #010101;
 }
 
@@ -19,7 +21,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--bg);
+  background-color: var(--bg-primary);
   color: #fff;
   /* min-height: 5000px;    */
 }
@@ -47,7 +49,7 @@ body {
 }
 
 .navbar .navbar-logo span {
-  color: var(--primary);
+  color: var(--color-span);
   font-style: italic;
 }
 
@@ -93,7 +95,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-color: var(--primary);
+  background-color: var(--bg-primary);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -131,7 +133,7 @@ body {
 }
 
 .hero .content h1 span {
-  color: var(--primary);
+  color: var(--color-span);
 }
 
 .hero .content p {
@@ -150,7 +152,7 @@ body {
   padding: 1rem 3rem;
   font-size: 1.4rem;
   color: white;
-  background-color: var(--primary);
+  background-color: var(--bg-secondary);
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
@@ -159,6 +161,7 @@ body {
 .about,
 .menu,
 .contact {
+  background-color: var(--bg-secondary);
   padding: 8rem 7% 1.4rem;
 }
 
@@ -173,7 +176,7 @@ body {
 .about h2 span,
 .menu h2 span,
 .contact h2 span {
-  color: var(--primary);
+  color: var(--color-span);
 }
 
 .about .row {
