@@ -1,5 +1,5 @@
 :root {
-  --primary: #8b0000;
+  --primary: #ffa500;
 
   --bg: #010101;
 }
@@ -32,7 +32,7 @@ body {
   align-items: center;
   padding: 1.4rem 7%;
   background-color: rgba(1, 1, 1, 0.8);
-  border-bottom: 1px solid #513c28;
+  border-bottom: 1px solid var(--primary);
   position: fixed;
   top: 0;
   left: 0;
@@ -93,11 +93,15 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../img/header.jpg");
+  background-color: var(--primary);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
+}
+
+.hero .right-image {
+  margin-left: auto;
 }
 
 .hero::after {
@@ -105,12 +109,12 @@ body {
   display: block;
   position: absolute;
   width: 100%;
-  height: 30%;
+  height: 15%;
   bottom: 0;
   background: linear-gradient(
     0deg,
-    rgba(1, 1, 3, 1) 8%,
-    rgba(255, 255, 255, 0) 50%
+    rgba(1, 1, 1, 0.9) 3%,
+    rgba(255, 165, 0, 0.8) 50%
   );
 }
 
@@ -137,7 +141,7 @@ body {
   font-weight: 200;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
   mix-blend-mode: normal;
-  color: #ffffcc;
+  color: var(--bg);
 }
 
 .hero .content .cta {
@@ -261,6 +265,7 @@ body {
   display: flex;
   align-items: center;
   margin-top: 2rem;
+  border-radius: 0.5rem;
   background-color: var(--bg);
   border: 1px solid #eee;
   padding-left: 2rem;
@@ -280,6 +285,7 @@ body {
   padding: 1rem 3rem;
   font-size: 1.7rem;
   color: #fff;
+  border-radius: 0.5rem;
   background-color: var(--primary);
   cursor: pointer;
 }
@@ -341,7 +347,7 @@ footer .credit a {
   #bakso-menu {
     display: inline-block;
   }
-
+  /* Navbar Start */
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
@@ -371,6 +377,58 @@ footer .credit a {
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
   }
+  /* Navbar End */
+
+  /* Hero Start */
+  .hero {
+    display: block;
+  }
+
+  .hero .content h1 {
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.1;
+  }
+
+  .hero .content {
+    padding: 6rem 7% 1rem;
+    max-width: 60rem;
+    text-align: center;
+  }
+
+  .hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: white;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  }
+
+  .hero .right-image {
+    display: block; /* Mengatur gambar menjadi blok */
+    margin: 0 auto 0; /* Memberikan margin atas dan bawah, dan mengatur margin kiri dan kanan menjadi 'auto' agar gambar terpusat */
+    width: 70%; /* Menetapkan lebar gambar */
+    height: auto; /* Menjaga proporsi aspek gambar */
+  }
+
+  .hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    bottom: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(1, 1, 1, 0.9) 3%,
+      rgba(255, 165, 0, 0.8) 50%
+    );
+  }
+  /* Hero End */
 
   .about .row {
     flex-wrap: wrap;
